@@ -34,31 +34,3 @@ magicWindow.addEventListener("mouseup", function(e){
     setInterval(()=>recentMagicBall.move(),5)
 })
 
-// function setDiection(e){
-// const newMouseX = e.pageX
-// const newMouseY= e.pageY
-// const deltaX = (newMouseX - mouseX)/100;
-// const deltaY = (newMouseY - mouseY)/100;
-// console.log(deltaX)
-// console.log(deltaY)
-// // if (deltaX > 0)
-// // {
-// //     console.log("right")
-// //     // Moved right
-// // }
-// // else if (deltaX < 0)
-// // {
-// //     console.log("left")
-// //      // Moved left
-// // }
-// // if (deltaY > 0)
-// // {
-// //     console.log("down")
-// //      // Moved down
-// // }
-// // else if (deltaY < 0)
-// // {
-// //     console.log("up")
-// //     // Moved up
-// // }
-// }
