@@ -6,10 +6,7 @@ body.insertBefore(soundBoard, magicWindow)
 var synth;
 let effectsBoard = document.createElement('div')
 effectsBoard.id = "effects"
-effectsBoard.innerText = "Please select a Sound Effect"
 body.insertBefore(effectsBoard, magicWindow)
-let br = document.createElement('br')
-body.insertBefore(br, effectsBoard)
 effectsBoard.innerHTML = `
 <div>
     <input type="radio" id="none" name="effect" value="None">
@@ -62,20 +59,44 @@ effectsDiv.addEventListener("click", function(e){
         }
 })
 
-var selectedTone;
 var growingInterval;
+var mouseX;
+var mouseY;
+var selectedNote;
+var intervalArray=[]
+//magic window ideas change the color of the background breifly tothe color of the ball that hits 
+//play the noise of the ball that hits 
+//clears all the balls on screen 
+function clearMagicBalls(){
+    const ballKiller = document.createElement('button')
+    ballKiller.textContent="Remove Balls"
+    ballKiller.onclick=function(){
+        MagicBall.all =[]
+     while (magicWindow.lastElementChild) {
+            magicWindow.removeChild(magicWindow.lastElementChild);
+        }
+     intervalArray.forEach(interval => clearInterval(interval) )
+    }
+    body.appendChild(ballKiller)
+}
+//creates the ball, creates the tone ,grows the ball
 magicWindow.addEventListener("mousedown", function(e){
-    synth.triggerAttack(selectedTone)
-    let magicBall = new MagicBall(e)
-
-    growingInterval = setInterval(() => magicBall.grow(), 60)
+    synth.triggerAttack(selectedNote)
+    let magicBall = new MagicBall(e,)
+    mouseX = e.pageX
+    mouseY = e.pageY
+     growingInterval = setInterval(() => magicBall.grow(), 60)
 })
-
+//sets momentum direction
 magicWindow.addEventListener("mouseup", function(e){ 
     synth.triggerRelease()
     clearInterval(growingInterval) 
-    console.log(e)  
+    const recentMagicBall = MagicBall.all[MagicBall.all.length - 1]
+    recentMagicBall.setDirection(e)
+  intervalArray.push( setInterval(()=>recentMagicBall.move(),5))
 })
+//menu logic 
+clearMagicBalls()
 
 
 // document.addEventListener("click", function(e){
