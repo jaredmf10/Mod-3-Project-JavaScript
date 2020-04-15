@@ -98,24 +98,6 @@ pingPong.defaults = {
     "feedback" : 0.6
 };
 
-
-// let effects = ["phaser", "freeverb", "vibrato", "pitchShift", "crusher", "pingPong"] 
-
-// effects.forEach(effect => {
-//     let newDiv = document.createElement('div')
-//     let newInput = document.createElement('input')
-//     newInput.type = 'radio'
-//     newInput.id = effect
-//     newInput.name = 'effect'
-//     newInput.value = effect
-//     let newLabel = document.createElement('label')
-//     newLabel.setAttribute('for', newInput.id)
-//     newLabel.innerText = effect
-//     newDiv.appendChild(newInput)
-//     newDiv.appendChild(newLabel)
-//     body.insertBefore(newDiv, magicWindow)
-// });
-
 // let effectsBoard = document.createElement('div')
 // effectsBoard.innerText = "Please select a Sound Effect"
 // body.insertBefore(effectsBoard, magicWindow)
