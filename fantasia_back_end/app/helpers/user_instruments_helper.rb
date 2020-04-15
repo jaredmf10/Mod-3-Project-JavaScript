@@ -1,0 +1,2 @@
+module UserInstrumentsHelper
+end

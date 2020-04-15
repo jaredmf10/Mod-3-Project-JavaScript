@@ -1,2 +1,0 @@
-class MagicsController < ApplicationController
-end

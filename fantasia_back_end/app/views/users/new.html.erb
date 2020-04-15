@@ -1,0 +1,9 @@
+<h3> Enter Name Here </h3>
+<%= form_for @user do |f| %>
+
+<%= f.hidden_field :user_id, value: user.id %>
+<%= f.label :name, "Name:" %>
+<%= f.text_field :name %>
+<br>
+<%= f.submit %>
+<% end %>
