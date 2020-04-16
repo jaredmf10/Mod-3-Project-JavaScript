@@ -1,7 +1,7 @@
 // create sounds menu
 
 let soundBoard = document.createElement('div')
-soundBoard.textContent = "Sounds Menu - Press a Sound Key to begin"
+soundBoard.textContent = "Sounds Menu - Press a Sound Key and Select an Effect to begin"
 
 let notes = ["A", "B", "C", "D", "E", "F", "G"]
 notes.forEach(note => {
