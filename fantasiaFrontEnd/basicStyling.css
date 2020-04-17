@@ -198,5 +198,33 @@
   .1vw 0vw   5vw #f5d300, .2vw 0vw  20vw #f5d300, .4vw 0vw  10vw #f5d300,
   .1vw 0vw  10vw #f5d300, .2vw 0vw  30vw #f5d300, .4vw 0vw  10vw #f5d300;
 }
+@keyframes fadein { from { opacity: 0; }   to { opacity: .25; }}
+#introScreenFlash{
+  animation: fadein .10s infinite;
+  background: rgba(255, 255, 255, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
 
- 
+#introScreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#introText{
+  /* opacity: 1; */
+  font-size: 300px;
+  color: rgb(255, 74, 2);
+}

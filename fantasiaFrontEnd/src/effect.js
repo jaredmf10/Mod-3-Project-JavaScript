@@ -54,7 +54,7 @@ class MagicBall{
      }
      //collision detection
     changeDirection(){
-        const magicWindow = document.getElementById("magicWindow")
+        // const magicWindow = document.getElementById("magicWindow")
         const browserWidth = window.innerWidth
        
         // const envelopeButton= document.getElementById("envelopeButton")

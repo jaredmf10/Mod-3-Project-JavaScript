@@ -1,7 +1,7 @@
 // all the vars
 
-const magicWindow = document.getElementById("magicWindow")
-
+// const magicWindow = document.getElementById("magicWindow")
+var magicWindow = document.getElementById("magicWindow")
 const magicWindowMenu =document.createElement('div')
 
 magicWindowMenu.style.display="flex"
@@ -119,7 +119,47 @@ function pianoButton(){
 
 
 
+async function loadingIntro(){
+//so look up time out 
+ //recursively  
+//    HIRE 
+//    ME 
+//    BOB 
+//    IGER 
+ const introText = document.getElementById("introText")
+ 
+ const introScreen=document.getElementById("introScreen")
 
+ const words = [{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
+
+ 
+
+ 
+    
+ const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
+ 
+ async function asyncForEach(array, callback) {
+    for (let index = 0; index < array.length; index++) {
+      await callback(array[index], index, array);
+    }
+  }
+
+       
+       introScreen.addEventListener("click", async function(){ 
+        await asyncForEach(words,async(word)=>{ 
+         introText.innerText = word.text;
+          await waitFor(1000);
+         } ),introScreen.style.display="none"})
+       
+       
+       
+       
+      
+      
+    
+
+
+}
 
 
 
@@ -127,8 +167,9 @@ function pianoButton(){
 
 
 //menu logic
+loadingIntro()
 discoButton() 
 synthMenu()
 clearMagicBalls()
-pianoButton()
+// pianoButton()
 // slider()
