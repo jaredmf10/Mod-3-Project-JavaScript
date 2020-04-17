@@ -127,14 +127,14 @@ async function loadingIntro(){
 //    BOB 
 //    IGER 
  const introText = document.getElementById("introText")
- 
+ const introTextFlash = document.getElementById("introTextFlash")
  const introScreen=document.getElementById("introScreen")
 
- const words = [{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
-
+ const words = [{text:"MATTHEW PEAK"},{text:"&"},{text:"JARED"},{text:"'SWEET FINESSE'"},{text:"FLEMING"},{text:"PRESENT TO YOU"},{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
+ const outroWords = [{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
  
-
  
+//  {text:"THE CREATOR OF CORN TRADER PRO"},{ text:"AND JARED 'SWEET FINESSE' FLEMING"}
     
  const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
  
@@ -147,7 +147,10 @@ async function loadingIntro(){
        
        introScreen.addEventListener("click", async function(){ 
         await asyncForEach(words,async(word)=>{ 
+         introText.style.textShadow="none"
+         introText.style.color="rgb(255, 74, 2)"
          introText.innerText = word.text;
+         introTextFlash.innerText = word.text;
           await waitFor(1000);
          } ),introScreen.style.display="none"})
        

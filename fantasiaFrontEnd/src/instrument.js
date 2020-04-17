@@ -30,7 +30,17 @@ function synthMenu(){
       const aSelect = attackCurveSelectorMenu()
       const rSelect = releaseCurveSelectorMenu()
       const dSelect = decayCurveSelectorMenu()
-      envelopeShowcard.append(aSlider,aSelect,dSlider,dSelect,sSlider,rSlider,rSelect)
+
+       //append user settings 
+      userSaveSettingsMenu= userSaveSettings()
+
+      //append saved settings
+
+      userSavedSettings= userSavedSettings()
+    
+      
+
+      envelopeShowcard.append(aSlider,aSelect,dSlider,dSelect,sSlider,rSlider,rSelect,userSaveSettingsMenu,userSavedSettings)
 
       
 
@@ -182,6 +192,8 @@ function attackSlider(min,max,value){
    
     sliderDiv.appendChild(sliderValue)
     sliderDiv.appendChild(slider)
+
+   
   
 
 
@@ -316,3 +328,94 @@ function attackSlider(min,max,value){
     return releaseSelector
 
   }
+
+//jared's stuff 
+  function userSaveSettings(){
+  const userSettingsMenu =document.createElement('div')
+   userSettingsMenu.id="userSettingsMenu"
+    //save settings button 
+ const createSetting = document.createElement('button')
+
+ userSettingsMenu.appendChild(createSetting)
+
+createSetting.id = "new-setting"
+createSetting.textContent = "Name New Setting"
+
+createSetting.addEventListener("click", function(e){
+    e.preventDefault()
+    createSetting.style.visibility= 'hidden'
+    const userForm = document.createElement('form')
+    const form = document.getElementById('input')
+    userForm.innerHTML = `
+    <input type='text' name="user-form" id="Input" placeholder="Enter Name">
+    <button type="submit" value="Submit">Submit</button>
+    `
+    body.insertAdjacentElement('beforeend', userForm)
+})
+document.addEventListener('submit', function(event){
+    event.preventDefault()
+    const form = document.getElementById('input')
+    createSetting.style.visibility= "visible"
+    //remove the form 
+    // body.childNodes[8].remove()
+    const user = 1
+    const name = form.value
+    const attack = synth.envelope.attack
+    const decay = synth.envelope.decay
+    const sustain = synth.envelope.sustain
+    const release = synth.envelope.release
+    const _attackCurve = synth.envelope._attackCurve
+    const _releaseCurve = synth.envelope._releaseCurve
+    const newSetting = {user, name, attack, decay, sustain, release, _attackCurve, _releaseCurve}
+    userForm.innerHTML=""
+    fetch('http://localhost:3000/settings/', {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "accept": "application/json"
+      },
+      body: JSON.stringify(newSetting)
+    })
+    .then((response) => {
+        return response.json()
+    })
+    .then(response => {
+        getSettings()
+    }) 
+  })
+  return userSettingsMenu
+ }
+
+
+ //saved settings 
+ function userSavedSettings(){
+ const settingSelector= document.createElement('select')
+ 
+ function getSettings() { 
+ fetch('http://localhost:3000/settings/')
+ .then((response) => {
+     return response.json()
+ })
+ .then((settings) => {
+         settings.forEach(setting => {
+             const choice = document.createElement('option')
+             choice.textContent= setting.name
+             choice.value = `${setting.attack} ${setting.decay} ${setting.sustain} ${setting.release} ${setting._attackCurve} ${setting._releaseCurve}`
+             settingSelector.append(choice)
+     })
+ })
+}
+getSettings()
+settingSelector.addEventListener("change",function(e){
+ let array = e.target.value
+ let newValue = array.split(` `)
+ synth.envelope.attack = parseFloat(newValue[0])
+ synth.envelope.decay = parseFloat(newValue[1])
+ synth.envelope.sustain = parseFloat(newValue[2])
+ synth.envelope.release = parseFloat(newValue[3])
+ synth.envelope._attackCurve = newValue[4]
+ synth.envelope._releaseCurve = newValue[5]
+})
+
+return settingSelector
+ }
