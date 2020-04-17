@@ -20,6 +20,8 @@ var mouseY;
 var selectedNote;
 var noteDisplay=false
 var noteColor="red"
+var pianoDown = false
+var pianoUp = false
 
 
 var intervalArray=[]
@@ -75,7 +77,7 @@ function discoButton(){
             noteDivs[6].id="B"
             
             body.style.background="white"
-            discoButton.style.color="rgb(255, 101, 119)"
+            discoButton.style.color="rgb(255, 74, 2)"
             discoButton.innerText="LETS DISCO"
             disco = false
 
@@ -114,6 +116,26 @@ function pianoButton(){
    pianoButton.id = "pianoButton"
    pianoButton.innerText="Synth"
    body.appendChild(pianoButton)
+   pianoButton.onclick=(function(){
+       console.log("test")
+       if(pianoDown===false){
+           pianoDown = document.addEventListener("keydown",function(e){
+            if(e.which===32){
+            synth.triggerAttack(selectedNote)
+            }
+           })
+           pianoUp =document.addEventListener("keyup",function(e){
+               console.log("key up")
+            if(e.which===32){
+            synth.triggerRelease()
+            }
+           })
+       }else{
+           pianoDown=false
+           pianoUp=false
+       }
+   })
+
 }
 
 
@@ -130,12 +152,11 @@ async function loadingIntro(){
  const introTextFlash = document.getElementById("introTextFlash")
  const introScreen=document.getElementById("introScreen")
 
- const words = [{text:"MATTHEW PEAK"},{text:"&"},{text:"JARED"},{text:"'SWEET FINESSE'"},{text:"FLEMING"},{text:"PRESENT TO YOU"},{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
+ const words = [{text:"MATTHEW PEAK"},{text:"&"},{text:"JARED FLEMING"},{text:"PRESENT TO YOU"},{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
  const outroWords = [{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
  
  
-//  {text:"THE CREATOR OF CORN TRADER PRO"},{ text:"AND JARED 'SWEET FINESSE' FLEMING"}
-    
+
  const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
  
  async function asyncForEach(array, callback) {
@@ -174,5 +195,5 @@ loadingIntro()
 discoButton() 
 synthMenu()
 clearMagicBalls()
-// pianoButton()
+pianoButton()
 // slider()

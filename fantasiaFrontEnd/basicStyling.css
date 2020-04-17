@@ -1,7 +1,7 @@
 
 /* ball killer button */
 #ballKiller{
-     color:rgb(255, 101, 119);
+     color:rgb(255, 74, 2);
      background-color: transparent;
      border-color: #ccc;
      width: 20%;
@@ -9,15 +9,16 @@
 }
 
 #envelopeButton{
-     color:rgb(255, 101, 119);
+     color:rgb(255, 74, 2);
      background-color: transparent;
      border-color: #ccc;
      width: 40%;
      padding: 10px;
 }
+/* gb(255, 101, 119) */
 
 #pianoButton{
-  color:rgb(255, 101, 119);
+  color:rgb(255, 74, 2);
   background-color: transparent;
   border-color: #ccc;
   width: 20%;
@@ -26,7 +27,7 @@
 
 
 #discoButton{
-     color:rgb(255, 101, 119);
+     color:rgb(255, 74, 2);
      background-color: white;
      border-color: #ccc;
      width: 20%;
