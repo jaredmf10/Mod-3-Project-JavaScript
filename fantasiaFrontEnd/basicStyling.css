@@ -199,10 +199,11 @@
   .1vw 0vw   5vw #f5d300, .2vw 0vw  20vw #f5d300, .4vw 0vw  10vw #f5d300,
   .1vw 0vw  10vw #f5d300, .2vw 0vw  30vw #f5d300, .4vw 0vw  10vw #f5d300;
 }
+
 @keyframes fadein { from { opacity: 0; }   to { opacity: 1; }}
 #introScreenFlash{
   animation: fadein .10s infinite;
-  background: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, 0.2);
   position: absolute;
   top: 0;
   left: 0;
@@ -223,7 +224,7 @@
   height: 100%;
   z-index: 10;
 }
-
+/* .10s */
 #introTextFlash{
   animation: fadein .10s infinite;
   position: absolute; 
@@ -324,3 +325,40 @@ text-shadow:
    .1vw 0vw   5vw #ff4a02, .2vw 0vw  20vw #ff4a02, .4vw 0vw  10vw #ff4a02,
    .1vw 0vw  10vw #ff4a02, .2vw 0vw  30vw #ff4a02, .4vw 0vw  10vw #ff4a02;
  }
+
+ #neonYellow{
+  position: absolute;
+  opacity: 1;
+  font-size: 300px;
+  color: #fff2c4;
+  text-shadow:
+  .1vw 0vw .25vw #fff2c4, .2vw 0vw .25vw #fff2c4, .4vw 0vw .25vw #fff2c4,
+  
+  .1vw 0vw   0vw #ffe278, .2vw 0vw   0vw #ffe278, .4vw 0vw   0vw #ffe278,
+  .1vw 0vw  .1vw #ffe278, .2vw 0vw  .1vw #ffe278, .4vw 0vw  .1vw #ffe278,
+  .1vw 0vw   2vw #ffe278, .2vw 0vw   2vw #ffe278, .4vw 0vw   2vw #ffe278,
+  
+  .1vw 0vw   1vw #f5d300, .2vw 0vw   1vw #f5d300, .4vw 0vw   5vw #f5d300,
+  .1vw 0vw   5vw #f5d300, .2vw 0vw  20vw #f5d300, .4vw 0vw  10vw #f5d300,
+  .1vw 0vw  10vw #f5d300, .2vw 0vw  30vw #f5d300, .4vw 0vw  10vw #f5d300;
+
+ }
+
+
+ #neonT{
+  position: absolute;
+  opacity: 1;
+  font-size: 300px;
+  color: #d5feff;
+  text-shadow:
+     .1vw 0vw .25vw #d5feff, .2vw 0vw .25vw #d5feff, .4vw 0vw .25vw #d5feff,
+     
+     .1vw 0vw   0vw #a4fbfe, .2vw 0vw   0vw #a4fbfe, .4vw 0vw   0vw #a4fbfe,
+     .1vw 0vw  .1vw #a4fbfe, .2vw 0vw  .1vw #a4fbfe, .4vw 0vw  .1vw #a4fbfe,
+     .1vw 0vw   2vw #a4fbfe, .2vw 0vw   2vw #a4fbfe, .4vw 0vw   2vw #a4fbfe,
+     
+     .1vw 0vw   1vw #08f7fe, .2vw 0vw   1vw #08f7fe, .4vw 0vw   5vw #08f7fe,
+     .1vw 0vw   5vw #08f7fe, .2vw 0vw  20vw #08f7fe, .4vw 0vw  10vw #08f7fe,
+     .1vw 0vw  10vw #08f7fe, .2vw 0vw  30vw #08f7fe, .4vw 0vw  10vw #08f7fe;
+ }
+ 
