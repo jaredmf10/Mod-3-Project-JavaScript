@@ -32,15 +32,15 @@ function synthMenu(){
       const dSelect = decayCurveSelectorMenu()
 
        //append user settings 
-      userSaveSettingsMenu= userSaveSettings()
+     const userSaveSettingsMenu= userSaveSettings()
 
       //append saved settings
 
-      userSavedSettings= userSavedSettings()
+      const userSavedSettingsMenu= userSavedSettings()
     
       
 
-      envelopeShowcard.append(aSlider,aSelect,dSlider,dSelect,sSlider,rSlider,rSelect,userSaveSettingsMenu,userSavedSettings)
+      envelopeShowcard.append(aSlider,aSelect,dSlider,dSelect,sSlider,rSlider,rSelect,userSaveSettingsMenu,userSavedSettingsMenu)
 
       
 

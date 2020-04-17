@@ -252,4 +252,75 @@
     .1vw 0vw   5vw #7122fa, .2vw 0vw  20vw #7122fa, .4vw 0vw  10vw #7122fa,
     .1vw 0vw  10vw #7122fa, .2vw 0vw  30vw #7122fa, .4vw 0vw  10vw #7122fa;
 }
+
+
+
+#neonPurple{
+  position: absolute;
+  font-size: 300px;
+  /* color: rgb(255, 74, 2); */
+  opacity: 1;
+  color:#e0c3ff;
+  text-shadow:
+   .1vw 0vw .25vw #e0c3ff, .2vw 0vw .25vw #e0c3ff, .4vw 0vw .25vw #e0c3ff,
+
+    .1vw 0vw   0vw #b179fe, .2vw 0vw   0vw #b179fe, .4vw 0vw   0vw #b179fe,
+    .1vw 0vw  .1vw #b179fe, .2vw 0vw  .1vw #b179fe, .4vw 0vw  .1vw #b179fe,
+    .1vw 0vw   2vw #b179fe, .2vw 0vw   2vw #b179fe, .4vw 0vw   2vw #b179fe,
+
+    .1vw 0vw   1vw #7122fa, .2vw 0vw   1vw #7122fa, .4vw 0vw   5vw #7122fa,
+    .1vw 0vw   5vw #7122fa, .2vw 0vw  20vw #7122fa, .4vw 0vw  10vw #7122fa,
+    .1vw 0vw  10vw #7122fa, .2vw 0vw  30vw #7122fa, .4vw 0vw  10vw #7122fa;
+
+}
+#neonPink{
+position: absolute;
+font-size: 300px;
+opacity: 1;
+color:#ffcbd7;
+text-shadow:
+ .1vw 0vw .25vw #ffcbd7, .2vw 0vw .25vw #ffcbd7, .4vw 0vw .25vw #ffcbd7,
   
+  1vw 0vw   0vw #ff86a6, .2vw 0vw   0vw #ff86a6, .4vw 0vw   0vw #ff86a6,
+ .1vw 0vw  .1vw #ff86a6, .2vw 0vw  .1vw #ff86a6, .4vw 0vw  .1vw #ff86a6,
+ .1vw 0vw   2vw #ff86a6, .2vw 0vw   2vw #ff86a6, .4vw 0vw   2vw #ff86a6,
+ 
+ .1vw 0vw   1vw #ff2079, .2vw 0vw   1vw #ff2079, .4vw 0vw   5vw #ff2079,
+ .1vw 0vw   5vw #ff2079, .2vw 0vw  20vw #ff2079, .4vw 0vw  10vw #ff2079,
+ .1vw 0vw  10vw #ff2079, .2vw 0vw  30vw #ff2079, .4vw 0vw  10vw #ff2079;
+}
+
+#neonViolet{ 
+ position: absolute;
+ opacity: 1;
+ font-size: 300px;
+ color:#fecdff;
+ text-shadow:
+  .1vw 0vw .25vw #fecdff, .2vw 0vw .25vw #fecdff, .4vw 0vw .25vw #fecdff,
+
+  .1vw 0vw   0vw #f999fe, .2vw 0vw   0vw #f999fe, .4vw 0vw   0vw #f999fe,
+  .1vw 0vw  .1vw #f999fe, .2vw 0vw  .1vw #f999fe, .4vw 0vw  .1vw #f999fe,
+  .1vw 0vw   2vw #f999fe, .2vw 0vw   2vw #f999fe, .4vw 0vw   2vw #f999fe,
+
+   1vw 0vw   1vw #e92efb, .2vw 0vw   1vw #e92efb, .4vw 0vw   5vw #e92efb,
+  .1vw 0vw   5vw #e92efb, .2vw 0vw  20vw #e92efb, .4vw 0vw  10vw #e92efb,
+  .1vw 0vw  10vw #e92efb, .2vw 0vw  30vw #e92efb, .4vw 0vw  10vw #e92efb;
+}
+
+
+#neonOrange{ 
+  position: absolute;
+  opacity: 1;
+  font-size: 300px;
+  color:#ffcfb9;
+  text-shadow:
+   .1vw 0vw .25vw #ffcfb9, .2vw 0vw .25vw #ffcfb9, .4vw 0vw .25vw #ffcfb9,
+ 
+   .1vw 0vw   0vw #ffab86, .2vw 0vw   0vw #ffab86, .4vw 0vw   0vw #ffab86,
+   .1vw 0vw  .1vw #ffab86, .2vw 0vw  .1vw #ffab86, .4vw 0vw  .1vw #ffab86,
+   .1vw 0vw   2vw #ffab86, .2vw 0vw   2vw #ffab86, .4vw 0vw   2vw #ffab86,
+ 
+    1vw 0vw   1vw #ff4a02, .2vw 0vw   1vw #ff4a02, .4vw 0vw   5vw #ff4a02,
+   .1vw 0vw   5vw #ff4a02, .2vw 0vw  20vw #ff4a02, .4vw 0vw  10vw #ff4a02,
+   .1vw 0vw  10vw #ff4a02, .2vw 0vw  30vw #ff4a02, .4vw 0vw  10vw #ff4a02;
+ }

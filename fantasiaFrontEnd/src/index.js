@@ -152,10 +152,12 @@ async function loadingIntro(){
  const introTextFlash = document.getElementById("introTextFlash")
  const introScreen=document.getElementById("introScreen")
 
- const words = [{text:"MATTHEW PEAK"},{text:"&"},{text:"JARED FLEMING"},{text:"PRESENT TO YOU"},{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
- const outroWords = [{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
+ const words = [{text:"MATTHEW PEAK"},{text:"&"},{text:"JARED"},{text:"'SWEET FINESSE'"},{text:"FLEMING"},{text:"PRESENT TO YOU"},{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
+ const outroWords = [{text:"HIRE",id:"blue",},{text:"ME",id:"red"},{text:"BOB",id:"blue"},{text:"IGER",id:"blue"}]
  
- 
+ //  {text:"THE CREATOR OF CORN TRADER PRO"},{ text:"AND JARED 'SWEET FINESSE' FLEMING"}
+ //{text:"HIRE ME BOB IGER"}
+
 
  const waitFor = (ms) => new Promise(r => setTimeout(r, ms));
  
