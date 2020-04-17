@@ -1,0 +1,202 @@
+
+/* ball killer button */
+#ballKiller{
+     color:rgb(255, 101, 119);
+     background-color: transparent;
+     border-color: #ccc;
+     width: 20%;
+     padding: 10px;
+}
+
+#envelopeButton{
+     color:rgb(255, 101, 119);
+     background-color: transparent;
+     border-color: #ccc;
+     width: 40%;
+     padding: 10px;
+}
+
+#pianoButton{
+  color:rgb(255, 101, 119);
+  background-color: transparent;
+  border-color: #ccc;
+  width: 20%;
+  padding: 10px;
+}
+
+
+#discoButton{
+     color:rgb(255, 101, 119);
+     background-color: white;
+     border-color: #ccc;
+     width: 20%;
+     padding: 10px;
+}
+/* notes display */
+.noteDisplays{
+    font-size:large;
+    opacity: .25;
+}
+
+
+#A{
+    color:#09FBD3;
+}
+
+   
+#B{
+   color: #08F7fe;
+}
+   
+#C{
+ color:#7122fa;
+}
+   
+#D{
+ color:#E92efb;
+}
+   
+#E{
+     color:#ff2079;
+}
+   
+#F{
+    color:#ff6ec7;
+}
+   
+#G{
+    color: #F5D300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* disco logic */
+#discoA{
+  opacity: 1;
+  font-size: 50px;
+  color:#d3fff2;
+  text-shadow: 
+  .1vw 0vw .25vw #d3fff2, .2vw 0vw .25vw #d3fff2, .4vw 0vw .25vw #d3fff2, 
+
+  .1vw 0vw   0vw #92fee3, .2vw 0vw   0vw #92fee3, .4vw 0vw   0vw #92fee3,
+  .1vw 0vw  .1vw #92fee3, .2vw 0vw  .1vw #92fee3, .4vw 0vw  .1vw #92fee3,
+  .1vw 0vw   2vw #92fee3, .2vw 0vw   2vw #92fee3, .4vw 0vw   2vw #92fee3, 
+
+  .1vw 0vw   1vw #09fbd3, .2vw 0vw   1vw #09fbd3, .4vw 0vw   5vw #09fbd3, 
+  .1vw 0vw   5vw #09fbd3, .2vw 0vw  20vw #09fbd3, .4vw 0vw  10vw #09fbd3,
+  .1vw 0vw  10vw #09fbd3, .2vw 0vw  30vw #09fbd3, .4vw 0vw  10vw #09fbd3;
+}
+
+#discoB{
+ opacity: 1;
+ font-size: 50px;
+ color: #d5feff;
+ text-shadow:
+    .1vw 0vw .25vw #d5feff, .2vw 0vw .25vw #d5feff, .4vw 0vw .25vw #d5feff,
+    
+    .1vw 0vw   0vw #a4fbfe, .2vw 0vw   0vw #a4fbfe, .4vw 0vw   0vw #a4fbfe,
+    .1vw 0vw  .1vw #a4fbfe, .2vw 0vw  .1vw #a4fbfe, .4vw 0vw  .1vw #a4fbfe,
+    .1vw 0vw   2vw #a4fbfe, .2vw 0vw   2vw #a4fbfe, .4vw 0vw   2vw #a4fbfe,
+    
+    .1vw 0vw   1vw #08f7fe, .2vw 0vw   1vw #08f7fe, .4vw 0vw   5vw #08f7fe,
+    .1vw 0vw   5vw #08f7fe, .2vw 0vw  20vw #08f7fe, .4vw 0vw  10vw #08f7fe,
+    .1vw 0vw  10vw #08f7fe, .2vw 0vw  30vw #08f7fe, .4vw 0vw  10vw #08f7fe;
+}
+
+#discoC{ 
+   font-size: 50px;
+   opacity: 1;
+   color:#e0c3ff;
+   text-shadow:
+    .1vw 0vw .25vw #e0c3ff, .2vw 0vw .25vw #e0c3ff, .4vw 0vw .25vw #e0c3ff,
+
+     .1vw 0vw   0vw #b179fe, .2vw 0vw   0vw #b179fe, .4vw 0vw   0vw #b179fe,
+     .1vw 0vw  .1vw #b179fe, .2vw 0vw  .1vw #b179fe, .4vw 0vw  .1vw #b179fe,
+     .1vw 0vw   2vw #b179fe, .2vw 0vw   2vw #b179fe, .4vw 0vw   2vw #b179fe,
+
+     .1vw 0vw   1vw #7122fa, .2vw 0vw   1vw #7122fa, .4vw 0vw   5vw #7122fa,
+     .1vw 0vw   5vw #7122fa, .2vw 0vw  20vw #7122fa, .4vw 0vw  10vw #7122fa,
+     .1vw 0vw  10vw #7122fa, .2vw 0vw  30vw #7122fa, .4vw 0vw  10vw #7122fa;
+}
+
+#discoD{ 
+    opacity: 1;
+   font-size: 50px;
+   color:#fecdff;
+   text-shadow:
+    .1vw 0vw .25vw #fecdff, .2vw 0vw .25vw #fecdff, .4vw 0vw .25vw #fecdff,
+
+    .1vw 0vw   0vw #f999fe, .2vw 0vw   0vw #f999fe, .4vw 0vw   0vw #f999fe,
+    .1vw 0vw  .1vw #f999fe, .2vw 0vw  .1vw #f999fe, .4vw 0vw  .1vw #f999fe,
+    .1vw 0vw   2vw #f999fe, .2vw 0vw   2vw #f999fe, .4vw 0vw   2vw #f999fe,
+
+     1vw 0vw   1vw #e92efb, .2vw 0vw   1vw #e92efb, .4vw 0vw   5vw #e92efb,
+    .1vw 0vw   5vw #e92efb, .2vw 0vw  20vw #e92efb, .4vw 0vw  10vw #e92efb,
+    .1vw 0vw  10vw #e92efb, .2vw 0vw  30vw #e92efb, .4vw 0vw  10vw #e92efb;
+}
+
+#discoE{
+   font-size: 50px;
+   opacity: 1;
+   color:#ffcbd7;
+   text-shadow:
+    .1vw 0vw .25vw #ffcbd7, .2vw 0vw .25vw #ffcbd7, .4vw 0vw .25vw #ffcbd7,
+     
+     1vw 0vw   0vw #ff86a6, .2vw 0vw   0vw #ff86a6, .4vw 0vw   0vw #ff86a6,
+    .1vw 0vw  .1vw #ff86a6, .2vw 0vw  .1vw #ff86a6, .4vw 0vw  .1vw #ff86a6,
+    .1vw 0vw   2vw #ff86a6, .2vw 0vw   2vw #ff86a6, .4vw 0vw   2vw #ff86a6,
+    
+    .1vw 0vw   1vw #ff2079, .2vw 0vw   1vw #ff2079, .4vw 0vw   5vw #ff2079,
+    .1vw 0vw   5vw #ff2079, .2vw 0vw  20vw #ff2079, .4vw 0vw  10vw #ff2079,
+    .1vw 0vw  10vw #ff2079, .2vw 0vw  30vw #ff2079, .4vw 0vw  10vw #ff2079;
+}
+
+#discoF{
+  font-size: 50px;
+  opacity: 1;
+  color:#ffd8ef;
+  text-shadow:
+  .1vw 0vw .25vw #ffd8ef, .2vw 0vw .25vw #ffd8ef, .4vw 0vw .25vw #ffd8ef,
+  
+  .1vw 0vw   0vw #ffb0df, .2vw 0vw   0vw #ffb0df, .4vw 0vw   0vw #ffb0df,
+  .1vw 0vw  .1vw #ffb0df, .2vw 0vw  .1vw #ffb0df, .4vw 0vw  .1vw #ffb0df,
+  .1vw 0vw   2vw #ffb0df, .2vw 0vw   2vw #ffb0df, .4vw 0vw   2vw #ffb0df,
+  
+  .1vw 0vw   1vw #ff6ec7, .2vw 0vw   1vw #ff6ec7, .4vw 0vw   5vw #ff6ec7,
+  .1vw 0vw   5vw #ff6ec7, .2vw 0vw  20vw #ff6ec7, .4vw 0vw  10vw #ff6ec7,
+  .1vw 0vw  10vw #ff6ec7, .2vw 0vw  30vw #ff6ec7, .4vw 0vw  10vw #ff6ec7;
+}
+
+#discoG{
+  font-size: 50px;
+  opacity: 1;
+  color: #fff2c4;
+  text-shadow:
+  .1vw 0vw .25vw #fff2c4, .2vw 0vw .25vw #fff2c4, .4vw 0vw .25vw #fff2c4,
+  
+  .1vw 0vw   0vw #ffe278, .2vw 0vw   0vw #ffe278, .4vw 0vw   0vw #ffe278,
+  .1vw 0vw  .1vw #ffe278, .2vw 0vw  .1vw #ffe278, .4vw 0vw  .1vw #ffe278,
+  .1vw 0vw   2vw #ffe278, .2vw 0vw   2vw #ffe278, .4vw 0vw   2vw #ffe278,
+  
+  .1vw 0vw   1vw #f5d300, .2vw 0vw   1vw #f5d300, .4vw 0vw   5vw #f5d300,
+  .1vw 0vw   5vw #f5d300, .2vw 0vw  20vw #f5d300, .4vw 0vw  10vw #f5d300,
+  .1vw 0vw  10vw #f5d300, .2vw 0vw  30vw #f5d300, .4vw 0vw  10vw #f5d300;
+}
+
+ 

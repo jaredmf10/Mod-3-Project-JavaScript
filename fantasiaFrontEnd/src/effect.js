@@ -12,7 +12,7 @@ class MagicBall{
        this.borderRadius = "5px";
        this.position ="absolute";
        this.boxShadow = "inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04)";
-       this.backgroundColor = "red"
+       this.backgroundColor = noteColor
        this.node= this.build()
        MagicBall.all.push(this)
     }
@@ -55,13 +55,33 @@ class MagicBall{
      //collision detection
     changeDirection(){
         const magicWindow = document.getElementById("magicWindow")
+        const browserWidth = window.innerWidth
+       
+        // const envelopeButton= document.getElementById("envelopeButton")
+        // const ballKiller = document.getElementById("ballKiller")
+      ///magicWindow.style.width
         
-        if (parseInt(this.left,10) < 0 || parseInt(this.left,10) > (parseInt(magicWindow.style.width,10) - parseInt(this.borderRadius,10))) {
+        if (parseInt(this.left,10) < 0 || parseInt(this.left,10) > (parseInt(browserWidth,10) - parseInt(this.borderRadius,10))) {
             synth.triggerAttackRelease(this.note,"8n")
+           if(disco===true){ 
+            const discoButton = document.getElementById("discoButton")
+            // ballKiller.style.color = this.backgroundColor
+            // envelopeButton.style.color = this.backgroundColor
+            discoButton.style.color = this.backgroundColor
+            body.style.backgroundColor = this.backgroundColor
+           }
             this.directionX = -this.directionX ;
         }
         else if (parseInt(this.top,10) < 0 || parseInt(this.top,10) > (parseInt(magicWindow.style.height,10) - parseInt(this.borderRadius,10))) {
+            
             synth.triggerAttackRelease(this.note,"8n")
+            if(disco===true){ 
+                const discoButton = document.getElementById("discoButton")
+                // ballKiller.style.color = this.backgroundColor
+                // envelopeButton.style.color = this.backgroundColor
+                discoButton.style.color = this.backgroundColor
+                body.style.backgroundColor = this.backgroundColor
+            }
             this.directionY  = -this.directionY ;
         }
     }

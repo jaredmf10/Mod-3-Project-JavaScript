@@ -2,12 +2,14 @@
 
 function synthMenu(){
 //    console.log(synth.envelope.attack)
-   const synthMenuDiv=document.createElement('div')
-
+  const synthMenuDiv=document.createElement('div')
+  synthMenuDiv.style.width="20%"
+  synthMenuDiv.style.padding="10px"
   const envelopeButton=document.createElement('button')
+  envelopeButton.id = "envelopeButton"
   
   synthMenuDiv.appendChild(envelopeButton)
-  body.appendChild(synthMenuDiv)
+  magicWindowMenu.appendChild(synthMenuDiv)
   
   
   const envelopeShowcard = document.createElement('div')
@@ -242,8 +244,9 @@ function attackSlider(min,max,value){
     attackSelector.addEventListener("change",function(e){
         console.log(e.target.value)
         //  synth.envelope.attackcurve=e.target.value
-         
-         synth.envelope.attackCurve.setValueAtTime(e.target.value, "1") 
+         console.log(synth.envelope.attackCurve)
+         synth.envelope.attackCurve=e.target.value 
+         console.log(synth.envelope.attackCurve)
     })
 
     return attackSelector
@@ -265,9 +268,9 @@ function attackSlider(min,max,value){
      
     decaySelector.append(exponential,linear)
 
-    decaySelector.onselect=function(){
-         synth.envelope._decayCurve= decaySelector.selectedIndex.value
-    }
+    decaySelector.addEventListener("change",function(e){
+         synth.envelope._decayCurve= e.target.value
+    })
     return decaySelector
 
   }
@@ -306,9 +309,9 @@ function attackSlider(min,max,value){
      
     releaseSelector.append(exponential,linear,bounce,ripple,step,cosine,sine)
 
-    releaseSelector.onselect=function(){
-         synth.envelope._releaseCurve = releaseSelector.selectedIndex.value
-    }
+    releaseSelector.addEventListener("change",function(e){
+         synth.envelope._releaseCurve = e.target.value
+    })
 
     return releaseSelector
 
