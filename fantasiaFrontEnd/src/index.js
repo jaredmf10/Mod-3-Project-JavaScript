@@ -152,7 +152,7 @@ async function loadingIntro(){
  const introTextFlash = document.getElementById("introTextFlash")
  const introScreen=document.getElementById("introScreen")
 
- const words = [{text:"MATTHEW PEAK"},{text:"&"},{text:"JARED"},{text:"'SWEET FINESSE'"},{text:"FLEMING"},{text:"PRESENT TO YOU"},{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
+ const words = [{text:"MATTHEW PEAK"},{text:"PRESENTS TO YOU:"},{text:"HIRE",color:"blue",},{text:"ME",color:"red"},{text:"BOB",color:"blue"},{text:"IGER",color:"blue"}]
  const outroWords = [{text:"HIRE",id:"neonOrange",},{text:"ME",id:"neonOrange"},{text:"BOB",id:"neonOrange"},{text:"IGER",id:"neonOrange"},{text:"HIRE",id:"neonPurple",},{text:"ME",id:"neonPurple"},{text:"BOB",id:"neonPurple"},{text:"IGER",id:"neonPurple"},{text:"HIRE",id:"neonViolet",},{text:"ME",id:"neonViolet"},{text:"BOB",id:"neonViolet"},{text:"IGER",id:"neonViolet"},{text:"HIRE",id:"neonPink",},{text:"ME",id:"neonPink"},{text:"BOB",id:"neonPink"},{text:"IGER",id:"neonPink"},{text:"HIRE",id:"neonYellow",},{text:"ME",id:"neonYellow"},{text:"BOB",id:"neonYellow"},{text:"IGER",id:"neonYellow"},{text:"HIRE",id:"neonT",},{text:"ME",id:"neonT"},{text:"BOB",id:"neonT"},{text:"IGER",id:"neonT"}]
  
  //  {text:"THE CREATOR OF CORN TRADER PRO"},{ text:"AND JARED 'SWEET FINESSE' FLEMING"}
@@ -186,7 +186,7 @@ async function loadingIntro(){
             introText.innerText = word.text;
            
             
-         await waitFor(300);
+         await waitFor(275);
             } ),introScreen.style.display="none"})
        
        
